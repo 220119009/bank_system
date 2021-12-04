@@ -32,8 +32,8 @@ public class Login_Page extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         username = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
@@ -63,12 +63,11 @@ public class Login_Page extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(74, 31, 61));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/system/Bank.png"))); // NOI18N
-        jLabel6.setText("jLabel6");
-
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("We-Bank");
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/system/Bank.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -77,25 +76,24 @@ public class Login_Page extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(68, Short.MAX_VALUE))
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(186, 79, 84));
         jPanel3.setForeground(new java.awt.Color(186, 79, 84));
 
         username.setBackground(new java.awt.Color(186, 79, 84));
-        username.setForeground(new java.awt.Color(255, 255, 255));
         username.setText("Username");
         username.setBorder(null);
         username.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -103,9 +101,13 @@ public class Login_Page extends javax.swing.JFrame {
                 usernameFocusGained(evt);
             }
         });
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
 
         pass.setBackground(new java.awt.Color(186, 79, 84));
-        pass.setForeground(new java.awt.Color(255, 255, 255));
         pass.setText("jPasswordField1");
         pass.setBorder(null);
         pass.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -274,7 +276,12 @@ public class Login_Page extends javax.swing.JFrame {
         
         //create object of the sign up page
         Sign_Up sign = new Sign_Up();
+        
+        //open the other one
         sign.setVisible(true);
+        
+        
+        
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void usernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameFocusGained
@@ -286,6 +293,10 @@ public class Login_Page extends javax.swing.JFrame {
         
         pass.setText("");
     }//GEN-LAST:event_passFocusGained
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments
